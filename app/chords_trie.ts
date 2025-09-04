@@ -133,6 +133,3 @@ export function suggestChords(prefix: string, limit = 50): string[] {
   }
   return canon.slice(0, limit);
 }
-
-// Example: quick manual test (remove or guard for production)
-// console.log(suggestChords("F")); // ["F", "Fm", "F7", "Fmaj7", ...]
