@@ -1,9 +1,3 @@
-// Simple, flexible Trie for chord names (supports letters, #, b, digits)
-// Drop this file into your React Native project (e.g., src/lib/chords-trie.ts)
-// Usage:
-//   import { chordTrie, suggestChords, hasChord } from "./chords-trie";
-//   suggestChords("F"); // ["F", "Fm", "F7", ...]
-
 export class TrieNode {
   children: Map<string, TrieNode> = new Map();
   eow = false; // end-of-word
@@ -60,34 +54,46 @@ export class Trie {
 }
 
 // ---- Chord name catalog ----------------------------------------------------
-// We keep this intentionally opinionated but broad. You can add/remove flavors
-// easily by editing the arrays below.
 
 const ROOTS = [
   // naturals
-  "C", "D", "E", "F", "G", "A", "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "A",
+  "B",
   // sharps
-  "C#", "D#", "F#", "G#", "A#",
+  "C#",
+  "D#",
+  "F#",
+  "G#",
+  "A#",
   // flats (include common enharmonic spellings so users can type either)
-  "Db", "Eb", "Gb", "Ab", "Bb",
+  "Db",
+  "Eb",
+  "Gb",
+  "Ab",
+  "Bb",
 ];
 
 const QUALITIES = [
-  "",       // (plain) major triad, e.g., C
-  "m",      // minor
-  "7",      // dominant 7
-  "maj7",   // major 7
-  "m7",     // minor 7
-  "dim",    // diminished triad
-  "dim7",   // fully diminished 7
-  "m7b5",   // half-diminished (ø7)
-  "aug",    // augmented
-  "6",      // major 6
-  "m6",     // minor 6
-  "9",      // dominant 9
-  "m9",     // minor 9
-  "11",     // 11th
-  "13",     // 13th
+  "", // (plain) major triad, e.g., C
+  "m", // minor
+  "7", // dominant 7
+  "maj7", // major 7
+  "m7", // minor 7
+  "dim", // diminished triad
+  "dim7", // fully diminished 7
+  "m7b5", // half-diminished (ø7)
+  "aug", // augmented
+  "6", // major 6
+  "m6", // minor 6
+  "9", // dominant 9
+  "m9", // minor 9
+  "11", // 11th
+  "13", // 13th
   "sus2",
   "sus4",
   "add9",
