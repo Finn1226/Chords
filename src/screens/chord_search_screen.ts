@@ -1,6 +1,15 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { View, TextInput, Text, FlatList, TouchableOpacity, KeyboardAvoidingView, Platform, StyleSheet } from "react-native";
-import { suggestChords, hasChord } from "./chords-trie";
+import {
+  View,
+  TextInput,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+  Platform,
+  StyleSheet,
+} from "react-native";
+import { suggestChords, hasChord } from "../lib/chords_trie";
 
 // Simple fuzzy-ish helper: we only use prefix search for now (fast via trie)
 function getSuggestions(q: string) {
