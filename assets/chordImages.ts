@@ -17,29 +17,29 @@ import { ImageSourcePropType } from "react-native";
 // you add images. If a file is missing, the UI will fall back gracefully.
 export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
   // C family
-  C: require("../../assets/chords/C.png"),
-  Cm: require("../../assets/chords/Cm.png"),
-  C7: require("../../assets/chords/C7.png"),
-  Cmaj7: require("../../assets/chords/Cmaj7.png"),
-  Cs: require("../../assets/chords/Cs.png"), // C#
-  Csm: require("../../assets/chords/Csm.png"),
-  Cs7: require("../../assets/chords/Cs7.png"),
-  Csb: require("../../assets/chords/Csb.png"), // (rare) C♭ if you ever add it
-  Db: require("../../assets/chords/Db.png"),
-  Dbm: require("../../assets/chords/Dbm.png"),
-  Db7: require("../../assets/chords/Db7.png"),
+  C: require("./chords/C.png"),
+  Cm: require("./chords/Cm.png"),
+  C7: require("./chords/C7.png"),
+  Cmaj7: require("./chords/Cmaj7.png"),
+  Cs: require("./chords/Cs.png"), // C#
+  Csm: require("./chords/Csm.png"),
+  Cs7: require("./chords/Cs7.png"),
+  Csb: require("./chords/Csb.png"), // (rare) C♭ if you ever add it
+  Db: require("./chords/Db.png"),
+  Dbm: require("./chords/Dbm.png"),
+  Db7: require("./chords/Db7.png"),
 
   // F family
-  F: require("../../assets/chords/F.png"),
-  Fm: require("../../assets/chords/Fm.png"),
-  F7: require("../../assets/chords/F7.png"),
-  Fmaj7: require("../../assets/chords/Fmaj7.png"),
-  Fs: require("../../assets/chords/Fs.png"), // F#
-  Fsm: require("../../assets/chords/Fsm.png"),
-  Fs7: require("../../assets/chords/Fs7.png"),
-  Gb: require("../../assets/chords/Gb.png"),
-  Gbm: require("../../assets/chords/Gbm.png"),
-  Gb7: require("../../assets/chords/Gb7.png"),
+  F: require("./chords/F.png"),
+  Fm: require("./chords/Fm.png"),
+  F7: require("./chords/F7.png"),
+  Fmaj7: require("./chords/Fmaj7.png"),
+  Fs: require("./chords/Fs.png"), // F#
+  Fsm: require("./chords/Fsm.png"),
+  Fs7: require("./chords/Fs7.png"),
+  Gb: require("./chords/Gb.png"),
+  Gbm: require("./chords/Gbm.png"),
+  Gb7: require("./chords/Gb7.png"),
 
   // Add more as you create assets...
 };
