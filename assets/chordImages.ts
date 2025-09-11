@@ -18,30 +18,18 @@ import { ImageSourcePropType } from "react-native";
 export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
   // C family
   C: require("./chords/C.png"),
-  Cm: require("./chords/Cm.png"),
+  C6: require("./chords/C6.png"),
   C7: require("./chords/C7.png"),
+  C9: require("./chords/C9.png"),
+  Cdim: require("./chords/Cdim.png"),
+  Cm: require("./chords/Cm.png"),
+  Cm6: require("./chords/Cm6.png"),
+  Cm7: require("./chords/Cm7.png"),
   Cmaj7: require("./chords/Cmaj7.png"),
-  Cs: require("./chords/Cs.png"), // C#
-  Csm: require("./chords/Csm.png"),
-  Cs7: require("./chords/Cs7.png"),
-  Csb: require("./chords/Csb.png"), // (rare) C♭ if you ever add it
-  Db: require("./chords/Db.png"),
-  Dbm: require("./chords/Dbm.png"),
-  Db7: require("./chords/Db7.png"),
+  Csus: require("./chords/Csus.png"),
 
   // F family
   F: require("./chords/F.png"),
-  Fm: require("./chords/Fm.png"),
-  F7: require("./chords/F7.png"),
-  Fmaj7: require("./chords/Fmaj7.png"),
-  Fs: require("./chords/Fs.png"), // F#
-  Fsm: require("./chords/Fsm.png"),
-  Fs7: require("./chords/Fs7.png"),
-  Gb: require("./chords/Gb.png"),
-  Gbm: require("./chords/Gbm.png"),
-  Gb7: require("./chords/Gb7.png"),
-
-  // Add more as you create assets...
 };
 
 // Optional: a generic placeholder image if a chord diagram is missing.
