@@ -1,3 +1,6 @@
+import { Image } from "react-native";
+import { FALLBACK_CHORD_IMAGE, getChordImage } from "../../assets/chordImages";
+
 import React, { useEffect, useMemo, useState } from "react";
 import {
   FlatList,
@@ -72,6 +75,21 @@ export default function ChordSearchScreen() {
         <View style={styles.selectedCard}>
           <Text style={styles.selectedLabel}>Selected</Text>
           <Text style={styles.selectedChord}>{selected}</Text>
+
+          {(() => {
+            const src = getChordImage(selected);
+            if (!src && !FALLBACK_CHORD_IMAGE) return null;
+            return (
+              <View style={styles.imageWrap}>
+                {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
+                <Image
+                  source={src ?? FALLBACK_CHORD_IMAGE!}
+                  style={styles.image}
+                  resizeMode="contain"
+                />
+              </View>
+            );
+          })()}
         </View>
       )}
 
@@ -145,5 +163,21 @@ const styles = StyleSheet.create({
     color: "#e5e7eb",
     fontSize: 20,
     fontWeight: "700",
+    marginBottom: 8,
+  },
+  imageWrap: {
+    marginTop: 8,
+    width: "100%",
+    aspectRatio: 1.2,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#0d0f13",
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "#1f2937",
+  },
+  image: {
+    width: "100%",
+    height: "100%",
   },
 });
