@@ -33,9 +33,9 @@ export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
 };
 
 // Optional: a generic placeholder image if a chord diagram is missing.
-export const FALLBACK_CHORD_IMAGE: ImageSourcePropType | null = null;
+// export const FALLBACK_CHORD_IMAGE: ImageSourcePropType | null = null;
 // If you add one, e.g. assets/chords/placeholder.png, then set:
-// export const FALLBACK_CHORD_IMAGE = require("../../assets/chords/placeholder.png");
+export const FALLBACK_CHORD_IMAGE = require("./chords/placeholder.png");
 
 // ---- Normalization helpers -------------------------------------------------
 // Convert a user/canonical chord name (e.g., "F#maj7", "Bb", "cm") into a key
