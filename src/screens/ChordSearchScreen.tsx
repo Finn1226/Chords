@@ -83,7 +83,7 @@ export default function ChordSearchScreen() {
         </View>
 
         <View style={styles.rightPane}>
-          {selected && (
+          {selected ? (
             <View style={styles.selectedCard}>
               <Text style={styles.selectedLabel}>Selected</Text>
               <Text style={styles.selectedChord}>{selected}</Text>
@@ -102,6 +102,13 @@ export default function ChordSearchScreen() {
                   </View>
                 );
               })()}
+            </View>
+          ) : (
+            <View style={styles.placeholderCard}>
+              <Text style={styles.placeholderTitle}>No chord selected</Text>
+              <Text style={styles.placeholderText}>
+                Tap a chord on the left to preview its diagram
+              </Text>
             </View>
           )}
         </View>
@@ -164,6 +171,28 @@ const styles = StyleSheet.create({
     maxWidth: 360,
     marginLeft: 8,
     alignSelf: "flex-start",
+  },
+  placeholderCard: {
+    backgroundColor: "#0d0f13",
+    borderColor: "#1f2937",
+    borderWidth: 1,
+    borderStyle: "dashed",
+    borderRadius: 12,
+    padding: 16,
+    minHeight: 120,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  placeholderTitle: {
+    color: "#9ca3af",
+    fontSize: 14,
+    fontWeight: "600",
+    marginBottom: 4,
+  },
+  placeholderText: {
+    color: "#6b7280",
+    fontSize: 12,
+    textAlign: "center",
   },
   selectedCard: {
     backgroundColor: "#111317",
