@@ -8,7 +8,6 @@ export default function Home() {
       <StatusBar style="light" />
 
       <View style={styles.header}>
-        {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
         <Image
           source={require("../assets/images/icon.png")}
           style={styles.logo}

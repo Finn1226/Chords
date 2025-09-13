@@ -1,9 +1,8 @@
-import { Image } from "react-native";
-import { FALLBACK_CHORD_IMAGE, getChordImage } from "../../assets/chordImages";
-
 import React, { useEffect, useMemo, useState } from "react";
+import { FALLBACK_CHORD_IMAGE, getChordImage } from "../../assets/chordImages";
 import {
   FlatList,
+  Image,
   KeyboardAvoidingView,
   Platform,
   StyleSheet,
@@ -93,7 +92,6 @@ export default function ChordSearchScreen() {
                 if (!src && !FALLBACK_CHORD_IMAGE) return null;
                 return (
                   <View style={styles.imageWrap}>
-                    {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
                     <Image
                       source={src ?? FALLBACK_CHORD_IMAGE!}
                       style={styles.image}
