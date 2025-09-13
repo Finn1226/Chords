@@ -71,35 +71,41 @@ export default function ChordSearchScreen() {
 
       <Text style={styles.status}>{statusText}</Text>
 
-      {selected && (
-        <View style={styles.selectedCard}>
-          <Text style={styles.selectedLabel}>Selected</Text>
-          <Text style={styles.selectedChord}>{selected}</Text>
-
-          {(() => {
-            const src = getChordImage(selected);
-            if (!src && !FALLBACK_CHORD_IMAGE) return null;
-            return (
-              <View style={styles.imageWrap}>
-                {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
-                <Image
-                  source={src ?? FALLBACK_CHORD_IMAGE!}
-                  style={styles.image}
-                  resizeMode="contain"
-                />
-              </View>
-            );
-          })()}
+      <View style={styles.splitRow}>
+        <View style={styles.leftPane}>
+          <FlatList
+            data={data}
+            keyExtractor={(item) => item}
+            keyboardShouldPersistTaps="handled"
+            renderItem={renderItem}
+            contentContainerStyle={styles.list}
+          />
         </View>
-      )}
 
-      <FlatList
-        data={data}
-        keyExtractor={(item) => item}
-        keyboardShouldPersistTaps="handled"
-        renderItem={renderItem}
-        contentContainerStyle={styles.list}
-      />
+        <View style={styles.rightPane}>
+          {selected && (
+            <View style={styles.selectedCard}>
+              <Text style={styles.selectedLabel}>Selected</Text>
+              <Text style={styles.selectedChord}>{selected}</Text>
+
+              {(() => {
+                const src = getChordImage(selected);
+                if (!src && !FALLBACK_CHORD_IMAGE) return null;
+                return (
+                  <View style={styles.imageWrap}>
+                    {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
+                    <Image
+                      source={src ?? FALLBACK_CHORD_IMAGE!}
+                      style={styles.image}
+                      resizeMode="contain"
+                    />
+                  </View>
+                );
+              })()}
+            </View>
+          )}
+        </View>
+      </View>
     </KeyboardAvoidingView>
   );
 }
@@ -131,9 +137,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     color: "#9ca3af",
   },
-  list: {
-    paddingBottom: 24,
-  },
+  list: { paddingBottom: 24 },
   row: {
     paddingVertical: 12,
     borderBottomWidth: StyleSheet.hairlineWidth,
@@ -146,13 +150,27 @@ const styles = StyleSheet.create({
   bold: {
     fontWeight: "700",
   },
+  splitRow: {
+    flex: 1,
+    flexDirection: "row",
+    gap: 12 as unknown as number, // RN may ignore; margins handle spacing below
+  },
+  leftPane: {
+    flex: 1,
+    marginRight: 8,
+  },
+  rightPane: {
+    width: "42%",
+    maxWidth: 360,
+    marginLeft: 8,
+    alignSelf: "flex-start",
+  },
   selectedCard: {
     backgroundColor: "#111317",
     borderColor: "#374151",
     borderWidth: 1,
     borderRadius: 12,
     padding: 12,
-    marginBottom: 12,
   },
   selectedLabel: {
     color: "#9ca3af",
@@ -168,7 +186,8 @@ const styles = StyleSheet.create({
   imageWrap: {
     marginTop: 8,
     width: "100%",
-    aspectRatio: 1.2,
+    aspectRatio: 1,
+    maxHeight: 240,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#0d0f13",
