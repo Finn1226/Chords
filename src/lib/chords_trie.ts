@@ -94,6 +94,7 @@ const QUALITIES = [
   "m9", // minor 9
   "11", // 11th
   "13", // 13th
+  "sus", // generic suspended
   "sus2",
   "sus4",
   "add9",
