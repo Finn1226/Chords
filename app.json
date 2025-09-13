@@ -51,6 +51,12 @@
         "projectId": "16361bdf-5c76-47bc-b2b9-58823740b595"
       }
     },
-    "owner": "hgdxfinn"
+    "owner": "hgdxfinn",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/16361bdf-5c76-47bc-b2b9-58823740b595"
+    }
   }
 }
