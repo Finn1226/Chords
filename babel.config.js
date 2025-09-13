@@ -3,11 +3,9 @@ module.exports = function (api) {
   return {
     presets: ["babel-preset-expo"],
     plugins: [
-      // Enables file-based routing transforms for expo-router
-      require.resolve("expo-router/babel"),
-      // Reanimated plugin must be listed last
-      "react-native-reanimated/plugin",
+      // Reanimated v4 on RN 0.81+ moved to the Worklets plugin
+      // Keep this last in the list
+      "react-native-worklets/plugin",
     ],
   };
 };
-
