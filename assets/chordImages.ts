@@ -2,7 +2,7 @@
 // Put your PNGs/JPGs under: assets/chords/
 // Naming convention (recommended):
 //   Naturals & qualities:   C.png, Cm.png, C7.png, Cmaj7.png, Fsus4.png, ...
-//   Sharps use 's' in keys: Cs, Csm, Cs7, ...  (i.e., C# → Cs)
+//   Sharps use 's' everywhere: Cs, Csm, Cs7, ...  (i.e., C# → Cs)
 //   Flats keep 'b':         Db, Dbm7, ...
 // This avoids '#' in file names and keeps them filesystem-friendly across OSes.
 
@@ -29,8 +29,6 @@ export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
   Amaj7: require("./chords/Amaj7.png"),
   Aaug: require("./chords/Aaug.png"),
   Asus: require("./chords/Asus.png"),
-  Asus2: require("./chords/Asus.png"),
-  Asus4: require("./chords/Asus.png"),
 
   // B family
   B: require("./chords/B.png"),
@@ -44,8 +42,6 @@ export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
   Bmaj7: require("./chords/Bmaj7.png"),
   Baug: require("./chords/Baug.png"),
   Bsus: require("./chords/Bsus.png"),
-  Bsus2: require("./chords/Bsus.png"),
-  Bsus4: require("./chords/Bsus.png"),
 
   // C family
   C: require("./chords/C.png"),
@@ -59,8 +55,6 @@ export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
   Cmaj7: require("./chords/Cmaj7.png"),
   Caug: require("./chords/Caug.png"),
   Csus: require("./chords/Csus.png"),
-  Csus2: require("./chords/Csus.png"),
-  Csus4: require("./chords/Csus.png"),
 
   // D family
   D: require("./chords/D.png"),
@@ -74,8 +68,6 @@ export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
   Dmaj7: require("./chords/Dmaj7.png"),
   Daug: require("./chords/Daug.png"),
   Dsus: require("./chords/Dsus.png"),
-  Dsus2: require("./chords/Dsus.png"),
-  Dsus4: require("./chords/Dsus.png"),
 
   // E family
   E: require("./chords/E.png"),
@@ -89,8 +81,6 @@ export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
   Emaj7: require("./chords/Emaj7.png"),
   Eaug: require("./chords/Eaug.png"),
   Esus: require("./chords/Esus.png"),
-  Esus2: require("./chords/Esus.png"),
-  Esus4: require("./chords/Esus.png"),
 
   // F family
   F: require("./chords/F.png"),
@@ -104,8 +94,6 @@ export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
   Fmaj7: require("./chords/Fmaj7.png"),
   Faug: require("./chords/Faug.png"),
   Fsus: require("./chords/Fsus.png"),
-  Fsus2: require("./chords/Fsus.png"),
-  Fsus4: require("./chords/Fsus.png"),
 
   // G family
   G: require("./chords/G.png"),
@@ -119,30 +107,28 @@ export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
   Gmaj7: require("./chords/Gmaj7.png"),
   Gaug: require("./chords/Gaug.png"),
   Gsus: require("./chords/Gsus.png"),
-  Gsus2: require("./chords/Gsus.png"),
-  Gsus4: require("./chords/Gsus.png"),
 
-  // ---------- Sharps (keys use 's', files use '#') ----------
+  // ---------- Sharps (use 's' for both keys and files) ----------
   // C# subset
-  Csdim: require("./chords/C#dim.png"),
-  Csm: require("./chords/C#m.png"),
-  Csm6: require("./chords/C#m6.png"),
-  Csm7: require("./chords/C#m7.png"),
+  Csdim: require("./chords/Csdim.png"),
+  Csm: require("./chords/Csm.png"),
+  Csm6: require("./chords/Csm6.png"),
+  Csm7: require("./chords/Csm7.png"),
 
   // F# subset
-  Fs: require("./chords/F#.png"),
-  Fs7: require("./chords/F#7.png"),
-  Fs9: require("./chords/F#9.png"),
-  Fsdim: require("./chords/F#dim.png"),
-  Fsm: require("./chords/F#m.png"),
-  Fsm6: require("./chords/F#m6.png"),
-  Fsm7: require("./chords/F#m7.png"),
+  Fs: require("./chords/Fs.png"),
+  Fs7: require("./chords/Fs7.png"),
+  Fs9: require("./chords/Fs9.png"),
+  Fsdim: require("./chords/Fsdim.png"),
+  Fsm: require("./chords/Fsm.png"),
+  Fsm6: require("./chords/Fsm6.png"),
+  Fsm7: require("./chords/Fsm7.png"),
 
   // G# subset
-  Gsdim: require("./chords/G#dim.png"),
-  Gsm: require("./chords/G#m.png"),
-  Gsm6: require("./chords/G#m6.png"),
-  Gsm7: require("./chords/G#m7.png"),
+  Gsdim: require("./chords/Gsdim.png"),
+  Gsm: require("./chords/Gsm.png"),
+  Gsm6: require("./chords/Gsm6.png"),
+  Gsm7: require("./chords/Gsm7.png"),
 
   // ---------- Flats ----------
   // Ab subset
@@ -153,8 +139,6 @@ export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
   Abmaj7: require("./chords/Abmaj7.png"),
   Abaug: require("./chords/Abaug.png"),
   Absus: require("./chords/Absus.png"),
-  Absus2: require("./chords/Absus.png"),
-  Absus4: require("./chords/Absus.png"),
 
   // Bb subset
   Bb: require("./chords/Bb.png"),
@@ -168,8 +152,6 @@ export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
   Bbmaj7: require("./chords/Bbmaj7.png"),
   Bbaug: require("./chords/Bbaug.png"),
   Bbsus: require("./chords/Bbsus.png"),
-  Bbsus2: require("./chords/Bbsus.png"),
-  Bbsus4: require("./chords/Bbsus.png"),
 
   // Db subset
   Db: require("./chords/Db.png"),
@@ -179,8 +161,6 @@ export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
   Dbmaj7: require("./chords/Dbmaj7.png"),
   Dbaug: require("./chords/Dbaug.png"),
   Dbsus: require("./chords/Dbsus.png"),
-  Dbsus2: require("./chords/Dbsus.png"),
-  Dbsus4: require("./chords/Dbsus.png"),
 
   // Eb subset
   Eb: require("./chords/Eb.png"),
@@ -194,16 +174,12 @@ export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
   Ebmaj7: require("./chords/Ebmaj7.png"),
   Ebaug: require("./chords/Ebaug.png"),
   Ebsus: require("./chords/Ebsus.png"),
-  Ebsus2: require("./chords/Ebsus.png"),
-  Ebsus4: require("./chords/Ebsus.png"),
 
   // Gb subset (note: missing base Gb.png in assets)
   Gb6: require("./chords/Gb6.png"),
   Gbmaj7: require("./chords/Gbmaj7.png"),
   Gbaug: require("./chords/Gbaug.png"),
   Gbsus: require("./chords/Gbsus.png"),
-  Gbsus2: require("./chords/Gbsus.png"),
-  Gbsus4: require("./chords/Gbsus.png"),
 };
 
 // Optional: a generic placeholder image if a chord diagram is missing.
