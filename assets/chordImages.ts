@@ -2,8 +2,8 @@
 // Put your PNGs/JPGs under: assets/chords/
 // Naming convention (recommended):
 //   Naturals & qualities:   C.png, Cm.png, C7.png, Cmaj7.png, Fsus4.png, ...
-//   Sharps use 's':         Cs.png, Csm.png, Cs7.png, ...  (i.e., C# → Cs)
-//   Flats keep 'b':         Db.png, Dbm7.png, ...
+//   Sharps use 's' in keys: Cs, Csm, Cs7, ...  (i.e., C# → Cs)
+//   Flats keep 'b':         Db, Dbm7, ...
 // This avoids '#' in file names and keeps them filesystem-friendly across OSes.
 
 import { ImageSourcePropType } from "react-native";
@@ -16,7 +16,7 @@ import { ImageSourcePropType } from "react-native";
 // Example coverage for C and F families to get you rolling. Add more lines as
 // you add images. If a file is missing, the UI will fall back gracefully.
 export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
-  // C family
+  // C natural
   C: require("./chords/C.png"),
   C6: require("./chords/C6.png"),
   C7: require("./chords/C7.png"),
@@ -26,10 +26,31 @@ export const CHORD_IMAGE_MAP: Record<string, ImageSourcePropType> = {
   Cm6: require("./chords/Cm6.png"),
   Cm7: require("./chords/Cm7.png"),
   Cmaj7: require("./chords/Cmaj7.png"),
+  // Augmented: generated key uses 'aug', file uses '+'
+  Caug: require("./chords/C+.png"),
+  // Suspended: map generic + common sus2/sus4 to same image
   Csus: require("./chords/Csus.png"),
+  Csus2: require("./chords/Csus.png"),
+  Csus4: require("./chords/Csus.png"),
 
-  // F family
-  F: require("./chords/F.png"),
+  // C sharp (keys use 's', files keep '#')
+  Csdim: require("./chords/C#dim.png"),
+  Csm: require("./chords/C#m.png"),
+  Csm6: require("./chords/C#m6.png"),
+  Csm7: require("./chords/C#m7.png"),
+
+  // D flat
+  Db: require("./chords/Db.png"),
+  Db6: require("./chords/Db6.png"),
+  Db7: require("./chords/Db7.png"),
+  Db9: require("./chords/Db9.png"),
+  Dbmaj7: require("./chords/Dbmaj7.png"),
+  // Augmented
+  Dbaug: require("./chords/Db+.png"),
+  // Suspended (alias 2/4)
+  Dbsus: require("./chords/Dbsus.png"),
+  Dbsus2: require("./chords/Dbsus.png"),
+  Dbsus4: require("./chords/Dbsus.png"),
 };
 
 // Optional: a generic placeholder image if a chord diagram is missing.
@@ -43,7 +64,7 @@ export const FALLBACK_CHORD_IMAGE = require("./chords/placeholder.png");
 export function chordNameToKey(name: string): string {
   if (!name) return name;
   // Keep original casing for the first letter, uppercase root; rest as-is
-  // Then replace '#' with 's'. (b remains 'b')
+  // Then replace '#' with 's' for sharp keys. (b remains 'b')
   const trimmed = name.trim();
   const root = trimmed[0].toUpperCase();
   const rest = trimmed.slice(1);
