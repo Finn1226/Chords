@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Chords",
-    "slug": "Chords",
+    "name": "ChordFanta",
+    "slug": "ChordFanta",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "chords",
+    "scheme": "chordfanta",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -13,7 +13,8 @@
       "bundleIdentifier": "dev.finn.chords",
       "buildNumber": "1",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "CFBundleDisplayName": "ChordFanta"
       }
     },
     "android": {

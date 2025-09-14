@@ -1,4 +1,4 @@
-# Welcome to Chords
+# Welcome to ChordFanta
 
 My name is Yifei Li and I created this app for guitar players who are learning how to play chords.
 

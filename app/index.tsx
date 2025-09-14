@@ -13,7 +13,7 @@ export default function Home() {
           style={styles.logo}
           resizeMode="contain"
         />
-        <Text style={styles.title}>Chords</Text>
+        <Text style={styles.title}>ChordFanta</Text>
         <Text style={styles.subtitle}>Find chord diagrams fast</Text>
       </View>
 
