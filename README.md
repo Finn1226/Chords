@@ -2,6 +2,10 @@
 
 My name is Yifei Li and I created this app for guitar players who are learning how to play chords.
 
+## Available to download on iOS App Store!!
+
+Link: https://apps.apple.com/us/app/chordfanta/id6752529400?uo=2
+
 ## How do I use it?
 
 1. Input Chord names to the search bar
